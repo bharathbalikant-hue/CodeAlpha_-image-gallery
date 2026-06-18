@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A stunning, premium image gallery featuring breathtaking landscapes, wildlife, and architecture photos with smooth transitions and lightbox view." />
+  <title>Lumière Gallery — Premium Photo Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Dynamic Background & UI Elements -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="scroll-progress-bar" id="progressBar"></div>
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Lumière</span>
+      </div>
+      <nav class="header-nav">
+        <span class="nav-label">Gallery</span>
+        <span class="photo-count" id="photoCount">9 Photos</span>
+      </nav>
+    </div>
+    <div class="header-hero">
+      <h1 class="hero-title">The World Through <em>Light</em></h1>
+      <p class="hero-subtitle">A curated collection of breathtaking moments from around the globe</p>
+    </div>
+  </header>
+
+  <section class="filter-section" aria-label="Filter gallery by category">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" id="filterAll">All</button>
+      <button class="filter-btn" data-filter="nature" id="filterNature">🌿 Nature</button>
+      <button class="filter-btn" data-filter="city" id="filterCity">🏙 Urban</button>
+      <button class="filter-btn" data-filter="wildlife" id="filterWildlife">🦁 Wildlife</button>
+      <button class="filter-btn" data-filter="architecture" id="filterArchitecture">🏛 Architecture</button>
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search photos…" aria-label="Search photos" />
+      <span class="search-icon">⌕</span>
+    </div>
+  </section>
+
+  <main class="gallery-section" id="gallerySection">
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-card" data-index="0" data-category="nature" data-tags="mountains sunset landscape" id="card0">
+        <div class="card-img-wrap">
+          <img src="images/mountains.png" alt="Golden sunset over dramatic mountain peaks" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="0" id="expand0" aria-label="View mountains fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category nature">Nature</span>
+          <h2 class="card-title">Golden Peaks</h2>
+          <p class="card-meta">Mountain Landscape · Sunset</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="1" data-category="nature" data-tags="beach ocean tropical" id="card1">
+        <div class="card-img-wrap">
+          <img src="images/beach.png" alt="Aerial view of tropical beach with turquoise water" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="1" id="expand1" aria-label="View beach fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category nature">Nature</span>
+          <h2 class="card-title">Turquoise Dreams</h2>
+          <p class="card-meta">Tropical Beach · Aerial</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="2" data-category="city" data-tags="city night neon cyberpunk" id="card2">
+        <div class="card-img-wrap">
+          <img src="images/city.png" alt="Futuristic city skyline glowing with neon at night" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="2" id="expand2" aria-label="View city fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category city">Urban</span>
+          <h2 class="card-title">Neon Nights</h2>
+          <p class="card-meta">Cityscape · Night</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="3" data-category="nature" data-tags="forest trees mist magical" id="card3">
+        <div class="card-img-wrap">
+          <img src="images/forest.png" alt="Enchanted misty forest with sunbeams through ancient trees" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="3" id="expand3" aria-label="View forest fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category nature">Nature</span>
+          <h2 class="card-title">Enchanted Forest</h2>
+          <p class="card-meta">Forest · Mist &amp; Light</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="4" data-category="architecture" data-tags="building modern glass geometric" id="card4">
+        <div class="card-img-wrap">
+          <img src="images/architecture.png" alt="Modern glass skyscraper with geometric patterns" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="4" id="expand4" aria-label="View architecture fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category architecture">Architecture</span>
+          <h2 class="card-title">Glass &amp; Steel</h2>
+          <p class="card-meta">Modern Architecture · Geometry</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="5" data-category="wildlife" data-tags="lion animal africa savanna" id="card5">
+        <div class="card-img-wrap">
+          <img src="images/wildlife.png" alt="Majestic lion portrait in golden savanna light" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="5" id="expand5" aria-label="View wildlife fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category wildlife">Wildlife</span>
+          <h2 class="card-title">King of the Savanna</h2>
+          <p class="card-meta">Wildlife · Africa</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="6" data-category="nature" data-tags="aurora borealis iceland night sky stars" id="card6">
+        <div class="card-img-wrap">
+          <img src="images/aurora.png" alt="Northern Lights aurora reflecting over snowy mountain lake" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="6" id="expand6" aria-label="View aurora fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category nature">Nature</span>
+          <h2 class="card-title">Aurora Borealis</h2>
+          <p class="card-meta">Northern Lights · Iceland</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="7" data-category="nature" data-tags="desert sand dunes sunrise sahara" id="card7">
+        <div class="card-img-wrap">
+          <img src="images/desert.png" alt="Vast Sahara desert sand dunes with dramatic sunrise shadows" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="7" id="expand7" aria-label="View desert fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category nature">Nature</span>
+          <h2 class="card-title">Desert Dawn</h2>
+          <p class="card-meta">Sahara Desert · Sunrise</p>
+        </div>
+      </div>
+
+      <div class="gallery-card" data-index="8" data-category="nature" data-tags="waterfall tropical rainforest water" id="card8">
+        <div class="card-img-wrap">
+          <img src="images/waterfall.png" alt="Spectacular waterfall with long exposure silky water in rainforest" class="card-img" loading="lazy" />
+          <div class="card-overlay">
+            <button class="btn-expand" data-index="8" id="expand8" aria-label="View waterfall fullscreen">⤢</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <span class="card-category nature">Nature</span>
+          <h2 class="card-title">Cascade Falls</h2>
+          <p class="card-meta">Waterfall · Rainforest</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="empty-state" id="emptyState" hidden>
+      <p class="empty-icon">🔍</p>
+      <p class="empty-text">No photos match your search.</p>
+    </div>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox" hidden>
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+
+    <div class="lb-container">
+
+      <div class="lb-topbar">
+        <div class="lb-meta">
+          <span class="lb-category" id="lbCategory"></span>
+          <span class="lb-title" id="lbTitle"></span>
+        </div>
+
+        <div class="lb-filters" id="lbFilters">
+          <button class="lb-filter-pill active" data-lb-filter="none" id="lbFilterNone">Original</button>
+          <button class="lb-filter-pill" data-lb-filter="grayscale" id="lbFilterGrayscale">B&amp;W</button>
+          <button class="lb-filter-pill" data-lb-filter="sepia" id="lbFilterSepia">Sepia</button>
+          <button class="lb-filter-pill" data-lb-filter="warm" id="lbFilterWarm">Warm</button>
+          <button class="lb-filter-pill" data-lb-filter="cool" id="lbFilterCool">Cool</button>
+          <button class="lb-filter-pill" data-lb-filter="vivid" id="lbFilterVivid">Vivid</button>
+          <button class="lb-filter-pill" data-lb-filter="fade" id="lbFilterFade">Fade</button>
+        </div>
+
+        <button class="lb-close" id="lbClose" aria-label="Close lightbox">✕</button>
+      </div>
+
+      <div class="lb-image-wrap">
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+        <div class="lb-img-stage">
+          <img src="" alt="" class="lb-img" id="lbImg" />
+          <div class="lb-img-loader" id="lbLoader"></div>
+        </div>
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">›</button>
+      </div>
+
+      <div class="lb-strip" id="lbStrip"></div>
+
+      <div class="lb-counter" id="lbCounter">1 / 12</div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>✦ Lumière Gallery &nbsp;·&nbsp; All images AI-generated &nbsp;·&nbsp; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
