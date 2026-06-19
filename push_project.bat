@@ -19,7 +19,7 @@ echo.
 echo [4/5] Configuring remote repository...
 git branch -M main
 git remote remove origin 2>nul
-git remote add origin https://github.com/bharathbalikant-hue/CodeAlpha_-image-gallery.git
+git remote add origin https://github.com/swathitalakk-hub/CodeAlpha_-image-gallery.git
 echo.
 
 echo [5/5] Pushing to GitHub (origin/main)...

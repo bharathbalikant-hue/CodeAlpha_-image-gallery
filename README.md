@@ -28,19 +28,19 @@ To run this project locally, simply clone the repository and open the index file
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/bharathbalikant-hue/CodeAlpha_-image-gallery.git
+   git clone https://github.com/swathitalakk-hub/CodeAlpha_-image-gallery.git
    ```
 2. **Navigate to the directory:**
    ```bash
    cd CodeAlpha_-image-gallery
    ```
 3. **Open the project:**
-   Open `bharath 1/index.html` in any web browser.
+   Open `student/index.html` in any web browser.
 
 ## Project Structure
 
 ```text
-├── bharath 1/
+├── student/
 │   ├── images/         # Gallery image assets
 │   ├── index.html      # Main HTML page structure
 │   ├── style.css       # Core design system and styles
