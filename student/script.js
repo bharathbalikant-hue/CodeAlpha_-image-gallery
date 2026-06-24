@@ -2,11 +2,11 @@
 
 const PHOTOS = [
   { index: 0, src: 'images/mountains.png',    alt: 'Golden sunset over dramatic mountain peaks',                category: 'nature',       title: 'Golden Peaks',         meta: 'Mountain Landscape · Sunset'    },
-  { index: 1, src: 'images/beach.png',        alt: 'Aerial view of tropical beach with turquoise water',        category: 'nature',       title: 'Turquoise Dreams',     meta: 'Tropical Beach · Aerial'        },
-  { index: 2, src: 'images/city.png',         alt: 'Futuristic city skyline glowing with neon at night',        category: 'city',         title: 'Neon Nights',          meta: 'Cityscape · Night'              },
+  { index: 1, src: 'images/turtle.png',       alt: 'Sea turtle swimming gracefully underwater in clear blue ocean', category: 'nature',       title: 'Deep Blue Oasis',      meta: 'Sea Turtle · Underwater'        },
+  { index: 2, src: 'images/tokyo_night.png',  alt: 'Shinjuku Tokyo street lit up with neon signs at night',     category: 'city',         title: 'Tokyo Neon Lights',    meta: 'Cityscape · Tokyo Night'        },
   { index: 3, src: 'images/forest.png',       alt: 'Enchanted misty forest with sunbeams through ancient trees',category: 'nature',       title: 'Enchanted Forest',     meta: 'Forest · Mist & Light'         },
   { index: 4, src: 'images/architecture.png', alt: 'Modern glass skyscraper with geometric patterns',           category: 'architecture', title: 'Glass & Steel',        meta: 'Modern Architecture · Geometry' },
-  { index: 5, src: 'images/wildlife.png',     alt: 'Majestic lion portrait in golden savanna light',            category: 'wildlife',     title: 'King of the Savanna',  meta: 'Wildlife · Africa'             },
+  { index: 5, src: 'images/deer.png',         alt: 'Majestic deer standing in a foggy misty forest with sun rays',category: 'wildlife',     title: 'Forest Majesty',       meta: 'Wildlife · Deer'               },
   { index: 6, src: 'images/aurora.png',       alt: 'Northern Lights aurora reflecting over snowy mountain lake',category: 'nature',       title: 'Aurora Borealis',      meta: 'Northern Lights · Iceland'      },
   { index: 7, src: 'images/desert.png',       alt: 'Vast Sahara desert sand dunes with dramatic sunrise shadows',category: 'nature',      title: 'Desert Dawn',          meta: 'Sahara Desert · Sunrise'        },
   { index: 8, src: 'images/waterfall.png',    alt: 'Spectacular waterfall in tropical rainforest',              category: 'nature',       title: 'Cascade Falls',        meta: 'Waterfall · Rainforest'         },
